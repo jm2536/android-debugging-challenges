@@ -47,7 +47,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return 0;
+        return movies.size();
     }
 
     @NonNull
@@ -57,8 +57,8 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
         LayoutInflater inflater = LayoutInflater.from(context);
 
         // Inflate the custom layout
-        View movieView = inflater.inflate(R.layout.item_movie, parent, false);
-
+        // View movieView = inflater.inflate(R.layout.item_movie, parent, false);
+        View movieView = LayoutInflater.from(context).inflate(R.layout.item_movie, parent, false);
         // Return a new holder instance
         ViewHolder viewHolder = new ViewHolder(movieView);
         return viewHolder;
